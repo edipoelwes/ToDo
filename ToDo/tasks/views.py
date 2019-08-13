@@ -24,6 +24,8 @@ def newTask(request):
             task.done = 'doing'
             task.save()
 
+            messages.info(request, 'Tarefa inserida com sucesso.')
+
             return redirect('/')
     else:  
         form = TaskForm()
@@ -39,6 +41,8 @@ def editTask(request, id):
 
         if(form.is_valid()):
             task.save()
+            messages.info(request, 'Tarefa alterada com sucesso.')
+
             return redirect('/')
         else:
             return render(request, 'tasks/edittask.html', {'form': form, 'task': task})
