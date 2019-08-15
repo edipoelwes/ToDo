@@ -36,18 +36,21 @@
     margin-right: 25px;
 }
 
-.fas.fa-plus{
+.fas .fa-plus{
     color: #fff;
     margin-right: 10px;
     margin-left: 5px;
 }
 
 /*Search*/
-
-.fas.fa-serch{
+.fa-search{
+    cursor: pointer;
+}
+.fas .fa-search{
     position: absolute;
     top: 12px;
     right: 26px;
+    
 }
 
 .search-div{
